@@ -1,3 +1,7 @@
+CREATE DATABASE UNI;
+
+USE UNI;
+
 CREATE TABLE Estudiantes(
     Estudiante_Id INT NOT NULL PRIMARY KEY,
     Nombre_Estudiante VARCHAR(255) NOT NULL
@@ -6,8 +10,8 @@ CREATE TABLE Estudiantes(
 CREATE TABLE Horarios(
     Horario_Id INT NOT NULL PRIMARY KEY,
     Dia DATE NOT NULL,
-    Hora Inicio TIME NOT NULL,
-    Hora Final TIME NOT NULL
+    Hora_Inicio TIME NOT NULL,
+    Hora_Final TIME NOT NULL
 );
 
 CREATE TABLE Docentes(
@@ -41,4 +45,18 @@ CREATE TABLE Docentes_Cursos(
     FOREIGN KEY (Curso_Id) REFERENCES Cursos (Curso_Id) ON DELETE CASCADE
 );
 
-CREATE TABLE Aulas_C
+CREATE TABLE Aulas_Cursos(
+    Aula_Id INT,
+    Curso_Id INT,
+    PRIMARY KEY (Aula_Id, Curso_Id),
+    FOREIGN KEY (Aula_Id) REFERENCES Aulas (Aula_Id) ON DELETE CASCADE,
+    FOREIGN KEY (Curso_Id) REFERENCES Cursos (Curso_Id) ON DELETE CASCADE
+);
+
+CREATE TABLE Horarios_Cursos(
+    Horario_Id INT,
+    Curso_Id INT,
+    PRIMARY KEY (Horario_Id, Curso_Id),
+    FOREIGN KEY (Horario_Id) REFERENCES Horarios (Horario_Id) ON DELETE CASCADE,
+    FOREIGN KEY (Curso_Id) REFERENCES Cursos (Curso_Id) ON DELETE CASCADE
+);
