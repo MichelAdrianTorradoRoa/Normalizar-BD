@@ -47,4 +47,4 @@ La **Tercera Forma Normal (3NF)** va un paso más allá al eliminar dependencias
 Esta normalización reduce la redundancia al garantizar que los docentes, aulas y horarios se almacenen solo una vez para cada curso, y las relaciones se manejan a través de identificadores (IDs), evitando la duplicación de información innecesaria.
 
 ## Autores
-Hecho por [@MichelAdrianTorradoRoa](https://github.com/MichelAdrianTorradoRoa)
+Hecho por [@MichelAdrianTorradoRoa](https://github.com/MichelAdrianTorradoRoa) y [@CalderonxD](https://github.com/CalderonxD)
